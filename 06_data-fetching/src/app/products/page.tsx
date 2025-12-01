@@ -13,9 +13,9 @@ async function getProducts(): Promise<Product[]> {
   }); // Promise<response: Response>
 
   // error 확인용 - 50% 확률로 에러 발생
-  if (Math.random() > 0.5) {
-    throw new Error('50% 확률로 발생된 에러');
-  }
+  // if (Math.random() > 0.1) {
+  //   throw new Error('10% 확률로 발생된 에러');
+  // }
 
   if (!response.ok) {
     throw new Error('데이터를 불러오는데 문제가 있습니다.');
