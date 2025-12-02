@@ -1,61 +1,61 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "프리미엄 무선 노이즈 캔슬링 헤드폰",
       "price": 359000,
       "stock": 42
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "인체공학 버티컬 마우스",
       "price": 45000,
       "stock": 15
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "기계식 게이밍 키보드 (적축)",
       "price": 128000,
       "stock": 0
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "4K UHD 스마트 모니터 27인치",
       "price": 420000,
       "stock": 8
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "초고속 충전 보조배터리 20000mAh",
       "price": 38500,
       "stock": 100
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "블루투스 사운드바",
       "price": 89000,
       "stock": 23
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "스마트 LED 데스크 램프",
       "price": 54000,
       "stock": 55
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "노트북 쿨링 패드",
       "price": 21000,
       "stock": 12
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "USB-C 멀티 허브 (7-in-1)",
       "price": 49900,
       "stock": 30
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "휴대용 미니 선풍기",
       "price": 15000,
       "stock": 150
@@ -91,6 +91,24 @@
       "title": "라우팅 동작 방식",
       "content": "폴더/파일 기반으로 동작하여, 설정이 간결하고 직관적입니다.",
       "author": "route_master"
+    },
+    {
+      "id": "2cd7",
+      "title": "새 글",
+      "content": "이건 새글",
+      "author": "박세윤"
+    },
+    {
+      "id": "3369",
+      "title": "1",
+      "content": "1",
+      "author": "1"
+    },
+    {
+      "id": "5f0c",
+      "title": "2",
+      "content": "2",
+      "author": "2"
     }
   ]
 }
