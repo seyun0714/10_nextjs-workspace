@@ -1,3 +1,4 @@
+import PostSubmitButton from '../../(components)/PostSubmitButton';
 import { updatePostAction } from '../../action';
 import { getPostById } from '../../services';
 import { Post } from '../../types';
@@ -12,14 +13,12 @@ export default async function PostEditPage({ params }: PostEditPageProps) {
   const { id } = await params;
   const post: Post = await getPostById(id);
 
-  const updatePostActionWithId = updatePostAction.bind(null, post.id);
-
   return (
     <div className="mt-4 p-4  border rounded">
       <h2 className="text-xl font-semibold">게시글 수정</h2>
       <form
         className="flex flex-col gap-2 mt-4"
-        action={updatePostActionWithId}
+        action={updatePostAction.bind(null, post.id)}
       >
         <input
           type="text"
@@ -44,12 +43,7 @@ export default async function PostEditPage({ params }: PostEditPageProps) {
           defaultValue={post.content}
           required
         />
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white mt-2 p-2 rounded cursor-pointer"
-        >
-          수정
-        </button>
+        <PostSubmitButton text={'수정'} />
       </form>
     </div>
   );

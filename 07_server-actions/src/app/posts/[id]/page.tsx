@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getPostById } from '../services';
 import { Post } from '../types';
+import PostDeleteButton from '../(components)/PostDeleteButton';
 
 interface PostDetailPageProps {
   params: Promise<{
@@ -20,9 +21,9 @@ export default async function PostDetailPage({ params }: PostDetailPageProps) {
       <div>내용: {post?.content}</div>
 
       <hr />
-      <div>
+      <div className="flex gap-4">
         <Link href={`/posts/${id}/edit`}>수정</Link>
-        <button>삭제</button>
+        <PostDeleteButton id={id} />
       </div>
     </div>
   );
