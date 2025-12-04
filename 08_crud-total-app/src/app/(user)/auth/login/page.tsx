@@ -17,7 +17,7 @@ export default function Page() {
 
         <div className="text-center text-sm text-muted-foreground">
           계정이 없으신가요?{' '}
-          <Link href="/auth/register" className="text-primary hover:underline">
+          <Link href="/auth/signup" className="text-primary hover:underline">
             회원가입
           </Link>
         </div>

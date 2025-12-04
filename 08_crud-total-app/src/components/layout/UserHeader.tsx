@@ -19,7 +19,7 @@ export default function UserHeader() {
           <Link href="/auth/login">
             <Button variant="ghost">로그인</Button>
           </Link>
-          <Link href="/auth/register">
+          <Link href="/auth/signup">
             <Button variant="ghost">회원가입</Button>
           </Link>
           {/* 로그인 후 ui */}
