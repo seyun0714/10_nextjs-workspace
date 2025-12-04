@@ -86,6 +86,7 @@ server.post('/api/posts', (req, res, next) => {
   // (다른 유저로 테스트하고 싶으면 이 값을 바꾸세요)
   const currentUserId = 1;
   req.body.userId = currentUserId;
+  req.body.author = '홍길동';
   req.body.createdAt = new Date().toISOString();
 
   // id는 json-server가 자동 생성하므로 패스하고 저장 로직으로 이동
@@ -96,6 +97,8 @@ server.post('/api/posts', (req, res, next) => {
 // 5. 게시글 수정/삭제 권한 체크 (PUT/DELETE)
 // ==========================================
 server.use('/api/posts/:id', (req, res, next) => {
+  if (req.method === 'GET') return next();
+
   const postId = parseInt(req.params.id);
   const db = router.db;
   const post = db.get('posts').find({ id: postId }).value();
@@ -114,6 +117,7 @@ server.use('/api/posts/:id', (req, res, next) => {
   }
 
   req.body.userId = post.userId;
+  req.body.author = post.author;
   req.body.createdAt = post.createdAt;
 
   next(); // 권한 통과 시 json-server 로직 실행
